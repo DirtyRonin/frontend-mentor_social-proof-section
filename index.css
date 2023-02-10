@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=League+Spartan);
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 97%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  font-family: 'League Spartan', serif;
+}
+
+body {
+  margin: 0;
+  max-width: 1440px;
+}
+
+header {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background-image: url(images/bg-pattern-top-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+footer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  bottom: 0;
+}
+
+.sps-box {
+  padding: 2rem 10rem;
+  display: grid;
+}
+
+.sps-rating-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+
+.sps-description-box {
+  display: grid;
+  color: var(--very-dark-magenta);
+}
+
+.sps-description-box h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+.sps-description-box p {
+  line-height: 1.75rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.sps-rating-box {
+  margin-top: 5rem;
+  width: 400px;
+  display: grid;
+  grid-template-columns: repeat(2, 20px) 360px repeat(2, 20px);
+  grid-template-rows: repeat(3, 20%);
+  grid-gap: 1rem;
+  grid-template-areas:
+    'a a a . .'
+    '. b b b .'
+    '. . c c c';
+}
+
+.first-rating {
+  grid-area: a;
+}
+.second-rating {
+  grid-area: b;
+}
+.third-rating {
+  grid-area: c;
+}
+
+.sps-rating-card {
+  background-color: var(--soft-pink);
+  display: flex;
+
+  border-radius: 1rem;
+}
+
+.sps-rating {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+.sps-rating p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  letter-spacing: 0.07rem;
+}
+
+.sps-stars-rating {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0.5rem;
+}
+
+.sps-testimonials-row {
+  display: grid;
+  grid-gap: 0.5rem 1.5rem;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(2, 10px) 150px repeat(2, 10px);
+
+  grid-template-areas:
+    'a . .'
+    'a b .'
+    'a b c'
+    '. b c'
+    '. . c';
+}
+
+.first-testimonial {
+  grid-area: a;
+}
+.second-testimonial {
+  grid-area: b;
+}
+.third-testimonial {
+  grid-area: c;
+}
+
+.sps-testimonial-card {
+  background-color: var(--very-dark-magenta);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.sps-testimonial-card-header {
+  display: grid;
+  grid-gap: 0 1rem;
+  grid-template-columns: 40px auto;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-areas:
+    'd e'
+    'd f';
+}
+
+.sps-testimonial-card-header-avatar {
+  border-radius: 50%;
+  grid-area: d;
+  width: 35px;
+  margin: auto;
+}
+.sps-testimonial-card-header-fullname {
+  grid-area: e;
+  margin: 0;
+  color: white;
+}
+
+.sps-testimonial-card-header-competence {
+  grid-area: f;
+  margin: 0;
+  color: hsl(300, 43%, 57%);
+}
+
+.sps-testimonial-card-text {
+  color: white;
+  letter-spacing: 0.05rem;
+  line-height: 1.3rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
